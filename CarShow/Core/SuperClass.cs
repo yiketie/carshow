@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -170,12 +171,8 @@ namespace CarShow.Core
                       "&url=" + url;
 
             byte[] byteUserPwd = Encoding.UTF8.GetBytes(string1);
-            //实例化MD5CryptoServiceProvider
-            MD5CryptoServiceProvider myMd5 = new MD5CryptoServiceProvider();
-            // byte类型数组的值转换为 byte类型的Md5值
-            byte[] byteMd5UserPwd = myMd5.ComputeHash(byteUserPwd);
-            //将byte类型的Md5值转换为字符串
-            signature = Encoding.Default.GetString(byteMd5UserPwd).Trim();
+            signature = SHA1(byteUserPwd).Trim();
+        
             //返回Md5字符串
 
             ShareEntity entity = new ShareEntity();
@@ -190,8 +187,20 @@ namespace CarShow.Core
             return entity;
         }
 
-
-
+        /// <summary>
+        /// 进行加密
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static string SHA1(byte[]  s)
+        {
+            SHA1 sha1 = new SHA1CryptoServiceProvider(); 
+            byte[] bytes_out = sha1.ComputeHash(s);
+            sha1.Dispose();
+            string result = BitConverter.ToString(bytes_out);
+            result = result.Replace("-", "");
+            return result;
+        }
 
     }
 }
