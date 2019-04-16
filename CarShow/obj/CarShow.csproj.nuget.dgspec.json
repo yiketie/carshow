@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\柴建国H5\\code\\CarShow\\CarShow\\CarShow.csproj": {}
+    "E:\\柴建国H5\\code\\git\\CarShow\\CarShow.csproj": {}
   },
   "projects": {
-    "E:\\柴建国H5\\code\\CarShow\\CarShow\\CarShow.csproj": {
+    "E:\\柴建国H5\\code\\git\\CarShow\\CarShow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\柴建国H5\\code\\CarShow\\CarShow\\CarShow.csproj",
+        "projectUniqueName": "E:\\柴建国H5\\code\\git\\CarShow\\CarShow.csproj",
         "projectName": "CarShow",
-        "projectPath": "E:\\柴建国H5\\code\\CarShow\\CarShow\\CarShow.csproj",
+        "projectPath": "E:\\柴建国H5\\code\\git\\CarShow\\CarShow.csproj",
         "packagesPath": "C:\\Users\\wxk\\.nuget\\packages\\",
-        "outputPath": "E:\\柴建国H5\\code\\CarShow\\CarShow\\obj\\",
+        "outputPath": "E:\\柴建国H5\\code\\git\\CarShow\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -60,6 +60,14 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.8.1, )"
             }
           },
           "imports": [

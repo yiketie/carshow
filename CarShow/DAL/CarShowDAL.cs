@@ -9,8 +9,8 @@ namespace CarShow.DAL
 {
     public class CarShowDAL
     {
-        //static string conn = "server=47.93.150.139;uid=root;pwd=carshow_admin;database=carshow;trusted_Connection=True;MultipleActiveResultSets=true;Integrated Security=false;";
-        public static string MysqlCnnectionString = "Server =47.93.150.139; Database =carshow; Uid =root; Pwd =carshow_admin;Pooling=true; Max Pool Size=20;Min Pool Size=10";
+        //static string conn = "server=;uid=root;pwd=;database=;trusted_Connection=True;MultipleActiveResultSets=true;Integrated Security=false;";
+        public static string MysqlCnnectionString = "Server =; Database =; Uid =root; Pwd =;Pooling=true; Max Pool Size=20;Min Pool Size=10";
         ADONetHelper.MySql.MySqlClient client = null;
 
 
